@@ -1,8 +1,11 @@
-// Como começar o Projeto//
+// Como começar o Projeto vai Funcionar//
+
+Adicionar, Alterar e Excluir:
 
 Cidade: -código da cidade
         -nome da cidade
         
+Adicionar, Alterar e Excluir:       
 Loja:   - código da loja
         - nome da loja
         - endereço da loja
@@ -10,24 +13,45 @@ Loja:   - código da loja
         - valor do aluguel da bike normal
         - valor do aluguel da bike elétrica
         
+Adicionar, Alterar e Excluir:       
 Cliente:-CPF
         -nme
         -email
         
+Adicionar, Alterar e Excluir:        
 Bike:   -código
         -marca
         -modelo
         -data de compra
         -Tipo(normal ou elétrica)
         -Loja
- 
+Cadastrar:
 Aluguel:-código(gerado automaticamente)
         -data de aluguel
         -cliente
         -bike locada
         
-Devoluç:-código do aluguel
+Cadastrar:    
+Devolução:-código do aluguel
         -data de devolução
-       
+        
+Emitir um recibo da locação contendo:
+• Código da locação
+• Nome do cliente
+• Data de retirada
+• Data de devolução
+• Valor total (quantidade de horas * valor hora do local de retirada)
+
+ Exibir um relatório mostrando os 20 clientes que mais alugam bicicletas condendo:
+• Nome do cliente
+• Email
+• Número de locações
+• Total pago
+ 
+Exibir um relatório mostrando os 10 locais que mais faturaram nos últimos 30 dias contendo:
+• Código do local
+• Nome do local
+• Endereço
+• Total faturado
       
     
