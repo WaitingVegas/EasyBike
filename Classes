@@ -1,0 +1,149 @@
+Cidade
+Loja
+Cliente
+Bike
+Aluguel
+Devolução
+Recibo
+Relatório
+
+
+Gerenciador:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AluguelBicicleta.Negocio
+{
+    class Gerenciador
+    {
+        public class Gerenciador
+        {
+            // private Gravador Gravador { get; set; }
+            private List<Clientes> Cliente { get; set; }
+            private List<Cidades> Cidade { get; set; }
+            private List<Devolucoes> Devolucao { get; set; }
+            private List<LocaisLocacao> Locais { get; set; }
+            private List<Bicicletas> Bicicleta { get; set; }
+            private List<Alugueis> Aluguel { get; set; }
+
+
+            public Gerenciador()
+            {
+                this.Cliente = new List<Clientes>();
+                this.Cidade = new List<Cidades>();
+                this.Devolucao = new List<Devolucoes>();
+                this.Locais = new List<LocaisLocacao>();
+                this.Bicicleta = new List<Bicicletas>();
+                this.Aluguel = new List<Alugueis>();
+
+
+
+                // this.Gravador = new Gravador();
+                // this.Carregar();
+            }
+
+            /* public void Carregar()
+             {
+                 DadosGravador dados = this.Gravador.Carregar();
+                 this.Clientes = dados.Clientes;
+                 this.Bebidas = dados.Bebidas;
+                 this.Lanches = dados.Lanches;
+                 this.Pedidos = dados.Pedidos;
+             }
+
+             public void Salvar()
+             {
+                 this.Gravador.Salvar(this.Clientes,
+                                      this.Bebidas,
+                                      this.Lanches,
+                                      this.Pedidos);
+             }
+             */
+
+            public List<Clientes> ClientesCadastrados()
+            {
+                return this.Cliente.ToList();
+            }
+
+            public List<Cidades> CidadesCadastradas()
+            {
+                return this.Cidade.ToList();
+            }
+
+            public List<Devolucoes> DevolucoesCadastradas()
+            {
+                return this.Devolucao.ToList();
+            }
+
+            public List<LocaisLocacao> LocaisLocacaoCadastrados()
+            {
+                return this.Locais.ToList();
+            }
+
+            public List<Bicicletas> BicicletasCadastrados()
+            {
+                return this.Bicicleta.ToList();
+            }
+            public List<Alugueis> AlugueisCadastrados()
+            {
+                return this.Aluguel.ToList();
+            }
+
+
+
+
+            public void AdicionarCliente(Clientes cliente)
+            {
+                if (cliente == null)
+                    throw new Exception("O cliente não pode ser nulo");
+
+                if (String.IsNullOrEmpty(cliente.CPF))
+                    throw new Exception("O cliente precisa ter o CPF");
+
+                if (String.IsNullOrEmpty(cliente.NomeCliente))
+                    throw new Exception("O cliente precisa ter um nome");
+
+                if (String.IsNullOrEmpty(cliente.Email))
+                    throw new Exception("O cliente precisa ter um email");
+
+                this.Cliente.Add(cliente);
+                //this.Salvar();
+            }
+
+            public void AdicionarCidade(Cidades cidade)
+            {
+                if (cidade == null)
+                    throw new Exception("A cidade não pode ser nula");
+
+                if (String.IsNullOrEmpty(cidade.CodigoCidade))
+                    throw new Exception("Informe o codigo da Cidade");
+
+                if (String.IsNullOrEmpty(cidade.NomeCidade))
+                    throw new Exception("Informe o Nome da Cidade");
+
+                this.Cidade.Add(cidade);
+                //this.Salvar();
+            }
+
+            public void AdicionarAluguel(Alugueis aluguel)
+            {
+                if (aluguel == null)
+                    throw new Exception("O Aluguel não pode ser nulo");
+
+                if (aluguel.ClienteAluguelBicicleta == null)
+                    throw new Exception("Informe o cliente do pedido");
+
+                if (aluguel.RetiradaBicicleta == null || aluguel.RetiradaBicicleta == DateTime.MinValue)
+                    throw new Exception("Informe a data do pedido");
+
+                this.Aluguel.Add(aluguel);
+                //this.Salvar();
+            }
+
+
+        }// chaves do main
+    }
+}
