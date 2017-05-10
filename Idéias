@@ -1,0 +1,33 @@
+// Como começar o Projeto//
+
+Cidade: -código da cidade
+        -nome da cidade
+        
+Loja:   - código da loja
+        - nome da loja
+        - endereço da loja
+        - nome da cidade
+        - valor do aluguel da bike normal
+        - valor do aluguel da bike elétrica
+        
+Cliente:-CPF
+        -nme
+        -email
+        
+Bike:   -código
+        -marca
+        -modelo
+        -data de compra
+        -Tipo(normal ou elétrica)
+        -Loja
+ 
+Aluguel:-código(gerado automaticamente)
+        -data de aluguel
+        -cliente
+        -bike locada
+        
+Devoluç:-código do aluguel
+        -data de devolução
+       
+      
+    
